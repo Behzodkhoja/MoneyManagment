@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoneyManagment.Domain.Entities
 {
-    internal class Expose
+    public class Expose
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoneyManagment.Domain.Enums
 {
-    internal class UserRole
+    public enum UserRole
     {
     }
 }

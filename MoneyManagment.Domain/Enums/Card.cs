@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MoneyManagment.Service.DTOs.Exposes
+namespace MoneyManagment.Domain.Enums
 {
-    public class ExposeCreationDto
+    internal class Card
     {
     }
 }

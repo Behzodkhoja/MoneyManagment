@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoneyManagment.Service.Interfaces
 {
-    internal class IAuthService
+    public interface IAuthService
     {
     }
 }
