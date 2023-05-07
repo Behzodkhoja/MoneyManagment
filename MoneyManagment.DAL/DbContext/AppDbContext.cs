@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoneyManagment.DAL.DbContext
 {
-    internal class AppDbContext
+    public class AppDbContext
     {
     }
 }

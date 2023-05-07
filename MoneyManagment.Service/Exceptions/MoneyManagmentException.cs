@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoneyManagment.Service.Exceptions
 {
-    internal class MoneyManagmentException
+    public class MoneyManagmentException
     {
     }
 }

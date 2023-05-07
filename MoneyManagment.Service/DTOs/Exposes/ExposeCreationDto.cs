@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoneyManagment.Service.DTOs.Exposes
 {
-    internal class ExposeForCreationDto
+    public class ExposeCreationDto
     {
     }
 }

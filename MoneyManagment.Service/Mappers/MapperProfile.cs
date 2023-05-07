@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoneyManagment.Service.Mappers
 {
-    internal class MapperProfile
+    public class MapperProfile
     {
     }
 }

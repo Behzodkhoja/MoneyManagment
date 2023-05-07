@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoneyManagment.Domain.Configurations
 {
-    internal class PaginationParams
+    public class PaginationParams
     {
     }
 }

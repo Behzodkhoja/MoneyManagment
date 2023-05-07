@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoneyManagment.Service.Services
 {
-    internal class UserService
+    public class UserService
     {
     }
 }

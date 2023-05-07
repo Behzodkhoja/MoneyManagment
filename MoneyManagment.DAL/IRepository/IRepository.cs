@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoneyManagment.DAL.IRepository
 {
-    internal class IRepository
+    public class IRepository
     {
     }
 }

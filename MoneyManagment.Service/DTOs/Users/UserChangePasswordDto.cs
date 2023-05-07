@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoneyManagment.Service.DTOs.Users
 {
-    internal class UserChangePasswordDto
+    public class UserChangePasswordDto
     {
     }
 }
