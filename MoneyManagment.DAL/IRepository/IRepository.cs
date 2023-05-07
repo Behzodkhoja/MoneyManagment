@@ -8,5 +8,6 @@ namespace MoneyManagment.DAL.IRepository
 {
     public class IRepository
     {
+
     }
 }
