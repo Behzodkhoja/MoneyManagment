@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MoneyManagment.Domain.Enums
+namespace MoneyManagment.Shared.Helpers
 {
-    public enum UserRole
+    internal class PasswordHelper
     {
-        User,
-        Admin
     }
 }
