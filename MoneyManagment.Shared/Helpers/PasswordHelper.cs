@@ -1,6 +1,4 @@
-﻿
-
-namespace MoneyManagment.Shared.Helpers;
+﻿namespace MoneyManagment.Shared.Helpers;
 
 public class PasswordHelper
 {
@@ -13,3 +11,5 @@ public class PasswordHelper
         return BCrypt.Net.BCrypt.Verify(password, passwordHash);
     }
 }
+
+

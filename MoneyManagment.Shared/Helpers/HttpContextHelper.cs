@@ -1,6 +1,4 @@
-﻿
-
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 
 namespace MoneyManagment.Shared.Helpers;
 
@@ -11,3 +9,5 @@ public class HttpContextHelper
     public static long? UserId => long.Parse(HttpContext?.User?.FindFirst("Id")?.Value);
     public static string UserRole => HttpContext?.User?.FindFirst("role")?.Value;    
 }
+
+
