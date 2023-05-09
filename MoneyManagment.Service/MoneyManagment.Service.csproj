@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MoneyManagment.DAL\MoneyManagment.DAL.csproj" />
     <ProjectReference Include="..\MoneyManagment.Domain\MoneyManagment.Domain.csproj" />
     <ProjectReference Include="..\MoneyManagment.Shared\MoneyManagment.Shared.csproj" />
   </ItemGroup>
