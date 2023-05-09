@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace MoneyManagment.Shared.Helpers
+namespace MoneyManagment.Shared.Helpers;
+
+public class PasswordHelper
 {
-    public class PasswordHelper
+    public static string Hash(string password)
     {
-        public static string Hash(string password)
-        {
-            return BCrypt.Net.BCrypt.HashPassword(password);
-        }
+        return BCrypt.Net.BCrypt.HashPassword(password);
     }
     public static bool Verify(string password, string passwordHash)
     {
