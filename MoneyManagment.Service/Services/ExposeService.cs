@@ -77,7 +77,7 @@ namespace MoneyManagment.Service.Services
 
         public async Task<IEnumerable<ExposeResultDto>> RetrieveAllAsync(PaginationParams @params, string search)
         {
-            var exposes = this.exposeRepository.SelectAllAsync(u => !u.IsDeleted);
+            var exposes = this.exposeRepository.SelectAll(u => !u.IsDeleted);
 
             var result = this.mapper.Map<IEnumerable<ExposeResultDto>>(exposes);
 
@@ -92,7 +92,7 @@ namespace MoneyManagment.Service.Services
 
         public async  Task<IEnumerable<ExposeResultDto>> RetrieveAllByUserIdAsync(PaginationParams @params, string search)
         {
-            var exposes = this.exposeRepository.SelectAllAsync(u => !u.IsDeleted &&
+            var exposes = this.exposeRepository.SelectAll(u => !u.IsDeleted &&
             u.UserId == HttpContextHelper.UserId);
 
             var result = this.mapper.Map<IEnumerable<ExposeResultDto>>(exposes);

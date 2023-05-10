@@ -4,7 +4,7 @@ namespace MoneyManagment.Service.Extensions;
 
 public static class CollectionExtension
 {
-    public static IQueryable<T> ToPageList<T>(this IQueryable<T> source, PaginationParams @params)
+    public static IQueryable<T> ToPagedList<T>(this IQueryable<T> source, PaginationParams @params)
     {
         int numberOfItemsToSkip =(@params.PageSize - 1) * @params.PageSize;
         int totalCount = source.Count();

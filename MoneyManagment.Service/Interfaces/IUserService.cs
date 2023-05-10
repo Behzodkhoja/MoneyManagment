@@ -8,7 +8,7 @@ public interface IUserService
 {
     Task<UserResultDto> AddAsync(UserCreationDto dto);
     Task<UserResultDto> ModifyAsync(long id, UserUpdateDto dto);
-    Task<UserResultDto> RemoveAsync();
+    Task<bool> RemoveAsync(long id);
     Task<UserResultDto> RetrieveByIdAsync(long id);
     Task<User> RetrieveByEmailAsync(string email);
     Task<IEnumerable<UserResultDto>> RetrieveAllAsync(PaginationParams @params);
