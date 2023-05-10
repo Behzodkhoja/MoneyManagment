@@ -14,7 +14,7 @@ namespace MoneyManagment.DAL.IRepository
         ValueTask<TEntity> UpdateAsync(TEntity entity);
         ValueTask<bool> DeleteAsync(Expression<Func<TEntity, bool>> pridacate);
         ValueTask<TEntity> SelectAsync(Expression<Func<TEntity, bool>> pridacate);
-        IQueryable<TEntity> SelectAllAsync(Expression<Func<TEntity, bool>> pridacate = null);
+        IQueryable<TEntity> SelectAll(Expression<Func<TEntity, bool>> pridacate = null);
         ValueTask SaveAsync();
     }
 }

@@ -41,11 +41,11 @@ namespace MoneyManagment.DAL.Repository
         public async ValueTask SaveAsync() =>
             await this.dbContext.SaveChangesAsync();
 
-        public IQueryable<TEntity> SelectAllAsync(Expression<Func<TEntity, bool>> pridacate = null) =>
+        public IQueryable<TEntity> SelectAll(Expression<Func<TEntity, bool>> pridacate = null) =>
             pridacate is null ? this.dbSet : this.dbSet.Where(pridacate);
 
         public async ValueTask<TEntity> SelectAsync(Expression<Func<TEntity, bool>> pridacate) =>
-            await this.SelectAllAsync(pridacate).FirstOrDefaultAsync();
+            await this.SelectAll(pridacate).FirstOrDefaultAsync();
 
         public async ValueTask<TEntity> UpdateAsync(TEntity entity)
         {
