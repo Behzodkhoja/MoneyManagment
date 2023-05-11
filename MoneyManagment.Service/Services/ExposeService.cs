@@ -38,7 +38,7 @@ namespace MoneyManagment.Service.Services
             return this.mapper.Map<ExposeResultDto>(addedExpose);
         }
 
-        public async Task<bool> DeleteAsync(long id)
+        public async Task<bool> DeleteAsync(int id)
         {
             var expose = await this.exposeRepository.SelectAsync(e => e.Id == id);
             if (expose == null)
@@ -51,7 +51,7 @@ namespace MoneyManagment.Service.Services
             return true;
         }
 
-        public async Task<ExposeResultDto> ModifyAsync(long id, ExposeCreationDto dto)
+        public async Task<ExposeResultDto> ModifyAsync(int id, ExposeCreationDto dto)
         {
             var expose = await this.exposeRepository.SelectAsync(e => e.Id == id);
             if (expose == null)
@@ -66,7 +66,7 @@ namespace MoneyManagment.Service.Services
         }
 
 
-        public async Task<ExposeResultDto> RetrieveByIdAsync(long id)
+        public async Task<ExposeResultDto> RetrieveByIdAsync(int id)
         {
             var expose = await this.exposeRepository.SelectAsync(e => e.Id == id);
             if (expose == null)

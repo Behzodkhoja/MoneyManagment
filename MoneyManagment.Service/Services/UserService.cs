@@ -38,7 +38,7 @@ public class UserService : IUserService
         return this.mapper.Map<UserResultDto>(addedUser);
     }
 
-    public async Task<UserResultDto> ModifyAsync(long id, UserUpdateDto dto)
+    public async Task<UserResultDto> ModifyAsync(int id, UserUpdateDto dto)
     {
         var user = await this.userRepository.SelectAsync(u => u.Id == id);
         if (user == null)
@@ -71,7 +71,7 @@ public class UserService : IUserService
         return this.mapper.Map<UserResultDto>(user);
     }
 
-    public async Task<bool> RemoveAsync(long id)
+    public async Task<bool> RemoveAsync(int id)
     {
         var user = await this.userRepository.SelectAsync(u => u.Id == id);
         if (user == null)
@@ -79,7 +79,7 @@ public class UserService : IUserService
 
         user.DeletedBy = HttpContextHelper.UserId;
         await this.userRepository.DeleteAsync(u => u.Id == id);
-
+ 
         await this.userRepository.SaveAsync();
 
         return true;
@@ -96,7 +96,7 @@ public class UserService : IUserService
     public async Task<User> RetrieveByEmailAsync(string email)=>
         await this.userRepository.SelectAsync(u=>u.Email == email);
 
-    public async Task<UserResultDto> RetrieveByIdAsync(long id)
+    public async Task<UserResultDto> RetrieveByIdAsync(int id)
     {
         var user = await this.userRepository.SelectAsync(u => u.Id == id && !u.IsDeleted);
         if (user == null)

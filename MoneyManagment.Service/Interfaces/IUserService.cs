@@ -7,9 +7,9 @@ namespace MoneyManagment.Service.Interfaces;
 public interface IUserService
 {
     Task<UserResultDto> AddAsync(UserCreationDto dto);
-    Task<UserResultDto> ModifyAsync(long id, UserUpdateDto dto);
-    Task<bool> RemoveAsync(long id);
-    Task<UserResultDto> RetrieveByIdAsync(long id);
+    Task<UserResultDto> ModifyAsync(int id, UserUpdateDto dto);
+    Task<bool> RemoveAsync(int id );
+    Task<UserResultDto> RetrieveByIdAsync(int id);
     Task<User> RetrieveByEmailAsync(string email);
     Task<IEnumerable<UserResultDto>> RetrieveAllAsync(PaginationParams @params);
     Task<UserResultDto> PasswordChangeAsync(UserChangePasswordDto dto);
