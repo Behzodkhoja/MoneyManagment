@@ -15,7 +15,7 @@ namespace MoneyManagment.Domain.Entities
         [MaxLength(100)]
         public string Description { get; set; }
         public string Amout { get; set; }
-        public long? UserId { get; set; }
+        public int UserId { get; set; }
         public User User { get; set; }
     }
 }
