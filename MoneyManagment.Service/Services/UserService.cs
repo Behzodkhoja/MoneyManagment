@@ -87,7 +87,7 @@ public class UserService : IUserService
 
     public async Task<IEnumerable<UserResultDto>> RetrieveAllAsync(PaginationParams @params)
     {
-        var users = await this.userRepository.SelectAllAsync(u => !u.IsDeleted)
+        var users =  await this.userRepository.SelectAll(u => !u.IsDeleted)
             .ToPagedList(@params)
             .ToListAsync();
 
