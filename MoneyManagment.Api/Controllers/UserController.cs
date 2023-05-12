@@ -1,6 +1,10 @@
-﻿namespace MoneyManagment.Api.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace MoneyManagment.Api.Controllers
 {
-    public class UserController
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UserController : ControllerBase
     {
     }
 }

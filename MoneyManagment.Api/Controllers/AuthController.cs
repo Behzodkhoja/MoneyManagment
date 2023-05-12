@@ -1,6 +1,13 @@
-﻿namespace MoneyManagment.Api.Controllers
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using MoneyManagment.Service.Interfaces;
+
+namespace MoneyManagment.Api.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class AuthController : ControllerBase
 {
-    public class AuthController
-    {
-    }
+    private readonly IAuthService
 }
+ 
